@@ -7,7 +7,7 @@ function getPosLeft(i, j) {
 }
 
 
-//在随机生成数字的时候判断16宫格中是否还有空间
+
 function nospace(board) {
     for ( var i = 0; i < 4; i++) 
         for ( var j = 0; j < 4; j++) 
@@ -16,7 +16,7 @@ function nospace(board) {
     return true;
 }
 
-//实现功能判断
+
 function canMoveLeft( board ){
     for(var i = 0;i<4;i++)
         for(var j = 1;j<4;j++)
@@ -25,13 +25,13 @@ function canMoveLeft( board ){
                     return true;
                     
     return false;
-}//判断水平方向是否有障碍物
+}
 function noBlockHorizontal(row, col1, col2, board){
     for(var i = col1 + 1; i<col2; i++)
         if(board[row][i]!=0)
             return false;
     return true;
-}//最后收尾
+}
 
 function noBlockHorizontaL(col, row1, row2, board){
     for(var i = row1 + 1; i<row2; i++)
